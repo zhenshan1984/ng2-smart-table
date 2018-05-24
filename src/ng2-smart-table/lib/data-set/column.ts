@@ -5,6 +5,7 @@ export class Column {
   title: string = '';
   type: string = '';
   class: string = '';
+  commonClass: string = '';
   width: string = '';
   isSortable: boolean = false;
   isEditable: boolean = true;
@@ -55,6 +56,8 @@ export class Column {
   protected process() {
     this.title = this.settings['title'];
     this.class = this.settings['class'];
+    //get the commonClass from setting for both header cell and body cell, for example, in bootstrap you can hide the entire column with "d-none".
+    this.commonClass = this.settings['commonClass'];
     this.width = this.settings['width'];
     this.type = this.prepareType();
     this.editor = this.settings['editor'];

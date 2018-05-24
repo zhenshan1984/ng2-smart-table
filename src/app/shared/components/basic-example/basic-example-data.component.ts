@@ -21,6 +21,7 @@ export class BasicExampleDataComponent {
       },
       email: {
         title: 'Email',
+        commonClass: 'd-none'
       },
     },
   };
